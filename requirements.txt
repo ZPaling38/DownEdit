@@ -16,3 +16,4 @@ torch
 torchvision
 pillow
 opencv-python
+gdown

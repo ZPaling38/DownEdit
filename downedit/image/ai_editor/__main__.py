@@ -7,6 +7,7 @@ from colorama import *
 from downedit.utils.common import *
 from ...utils.image.image_process import *
 from pathlib import Path
+import gdown
 
 def check_model():
             
@@ -15,16 +16,22 @@ def check_model():
     model_path = os.path.join(os.path.dirname(abs_path), abs_path, 'downedit', 'ml')
 
     model_name = 'de_net'
-    file_id = '1ao1ovG1Qtx4b7EoskHXmi2E9rp5CHLcZ'
+    file_id = '1UApq9X0JsiMihgr5XmLPV6aD3jxV0a7l'
     filename = 'de_net.pth'
     model_dir = os.path.join(model_path, 'models', 'pre_trained', filename)
-
+    model_url = f"https://drive.google.com/file/d/{file_id}/view?usp=sharing"
+            
     if not os.path.isfile(model_dir):
-        print(f"""{Fore.CYAN}[Programs] {Fore.YELLOW}[File] {Fore.RED}Model Not found, {Fore.WHITE}downloading...""")
-        download._file(folder_path=os.path.join(model_path, 'models', 'pre_trained'), 
-                    download_url="https://fastupload.io/BIj6P09R1oP2/r0iY5YaYLH0gNHo/l76mZnP12manY/de_net.pth",
-                    file_name=model_name,
-                    file_extension=".pth")
+        print(f"""{Fore.CYAN}[Programs] {Fore.YELLOW}[File] {Fore.RED}Model Not found""")
+        
+        with console.status('[cyan]Downloading... please wait!', spinner='line') as status:   
+            gdown.download(model_url, model_dir, quiet=True, fuzzy=True)
+
+        f_length = os.path.getsize(model_dir)
+        f_size = f_length / (1024 ** 2)
+        print(f"""{Fore.CYAN}[Programs] {Fore.GREEN}[Status] {Fore.WHITE}File size: {f_size:.3f} MB""")    
+        print(f"""{Fore.CYAN}[Programs] {Fore.YELLOW}[File] {Fore.GREEN}Model downloaded successfully\n""")
+            
     return model_dir
 
 def rm_background(image_folder, output_folder=None):

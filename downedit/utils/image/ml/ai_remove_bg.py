@@ -5,18 +5,10 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 import cv2
-import uuid
-import os
-import time
-import os
 from torch.autograd import Variable
 from skimage import io, transform
 from colorama import *
 from PIL import Image
-import requests
-from io import BytesIO
-import argparse
-from torchvision.datasets.utils import download_file_from_google_drive
 
 def remove_background(model_dir, input_imag_path, output_imag_path):
 

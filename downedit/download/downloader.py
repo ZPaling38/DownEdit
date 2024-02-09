@@ -6,7 +6,7 @@ from downedit.utils.common import *
 from colorama import *
 import requests
 from datetime import datetime
-
+from typing import Optional
 
 class Download:
     def __init__(self) -> None:
@@ -19,16 +19,17 @@ class Download:
     def clean_file_name(self, file_name):
         cleaned_name = re.sub(r'["*<>?\\|/:]', '', file_name)
         return cleaned_name
-
-    def _start(self, download_url, file_path, show_request_size=False, show_file_size=False):
-        size = 0
+    
+    def _get_file_info(self, download_url):
         file_bytes = requests.get(download_url, stream=True)
-        total_length = int(file_bytes.headers.get("Content-Length"))
-
-        if show_request_size:
-            print(f"{Fore.CYAN}[Programs] {Fore.GREEN}[Status] {Fore.WHITE}File size: {size:.4f} MB".format(
-                size=total_length / self.chunk_size / 1024))
-
+        try:
+            total_length = int(file_bytes.headers.get("Content-Length"))
+        except:
+            total_length = None
+        return file_bytes, total_length
+    
+    def _write_file(self, file_path, size, file_bytes, total_length: Optional[int] = 0):
+        
         with open(file_path, 'wb') as out_file:
             for data in file_bytes.iter_content(chunk_size=self.chunk_size):
                 size += len(data)
@@ -36,7 +37,17 @@ class Download:
                       f"{Fore.CYAN}[Programs] {Fore.GREEN}[Download]{Fore.WHITE} " + '%s %.2f%%' %
                       ('>' * int(size * 50 / total_length), float(size / total_length * 100)), end=' ')
                 out_file.write(data)
+                
+    def _start(self, download_url, file_path, show_request_size=False, show_file_size=False):
+        size = 0
+        file_bytes, total_length = self._get_file_info(download_url)
 
+        if show_request_size:
+            print(f"{Fore.CYAN}[Programs] {Fore.GREEN}[Status] {Fore.WHITE}File size: {size:.4f} MB".format(
+                size=total_length / self.chunk_size / 1024))
+        
+        self._write_file(file_path, size, file_bytes, total_length)
+        
         if show_file_size:
             f_length = os.path.getsize(file_path)
             f_size = f_length / (1024 ** 2)
@@ -95,3 +106,4 @@ class Download:
             print(
                 f"""{Fore.CYAN}[{self.get_time()}] {Fore.YELLOW}[File] {Fore.GREEN}{file_name}{file_extension}{Fore.YELLOW} Downloaded""")
             time.sleep(0.2)
+    
