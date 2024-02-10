@@ -1,2 +1,2 @@
 $(VENV_NAME)/
-downedit/__pycache__
+__pycache__/
