@@ -1,6 +1,5 @@
 <h1 align="center">DownEdit</h1>
 
-[![License](https://img.shields.io/github/license/sokunheng/downedit)](LICENSE)
 ![Static Badge](https://img.shields.io/badge/python-3.8%2B-brightgreen)
 
 <p>DownEdit is a powerful program that allows you to download videos from various social media platforms such as TikTok, Douyin, Kuaishou, and more. With DownEdit, you can easily download videos from user profiles and edit them in bulk. You have the option to flip the videos horizontally or vertically throughout the entire directory with just a single click. Stay tuned for more exciting features coming soon!</p>
