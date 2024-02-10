@@ -1,11 +1,14 @@
 <h1 align="center">DownEdit</h1>
 
+[![License][license-shield]][license-url]
+![Static Badge](https://img.shields.io/badge/python-3.8%2B-brightgreen)
 
-<p>An program that allows you to download all video users from any social media website such as Tiktok, Douyin, Kuaishou and others. After you've downloaded the video, you may also edit video by flipping it from left to right or right to left throughout the entire directory with just a single click (bulk edit). More features are on the way; stay tuned.!<p>
+[license-shield]: https://img.shields.io/github/license/sokunheng/downedit
 
-<!--- 
-## <a href="https://www.buymeacoffee.com/iamnamheng" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
---->
+[license-url]: https://github.com/sokunheng/DownEdit/blob/main/LICENSE
+
+
+<p>DownEdit is a powerful program that allows you to download videos from various social media platforms such as TikTok, Douyin, Kuaishou, and more. With DownEdit, you can easily download videos from user profiles and edit them in bulk. You have the option to flip the videos horizontally or vertically throughout the entire directory with just a single click. Stay tuned for more exciting features coming soon!</p>
 
 ## ✨ Preview
 <p align="center">
@@ -124,9 +127,15 @@ Tips: If you still getting error, try changing your Browser, use Incognito/Priva
 
 </details>
 
+- **`Edit Photo`** - Simply copy and paste (right click) whatever directory location you would like to process.
+
+<details>
+<summary>Tutorial</summary>
+
+</details>
 
 ## 🔎 Requirements
-- Python 3.6 or better
+- Python 3.8 or better
 
 ## ⚙ Installation 
 Step 1. Download and install [python](https://www.python.org/downloads/) on your pc.
@@ -159,15 +168,12 @@ If you're a non coder, you can also download the application and use it on your 
 - [Pystyle](https://github.com/billythegoat356/pystyle)
 - [Request_HTML](https://github.com/kennethreitz/requests-html)
 - [Random_User_Agent](https://pypi.org/project/requests-random-user-agent/)
- 
+- [Pillow](https://github.com/python-pillow/Pillow)
+- [Gdown](https://github.com/wkentaro/gdown)
+- [Torch](https://pypi.org/project/torch/)
+
 </details>
 
-
-<!-- ## 📡 API
-- [DouyinAPI](https://github.com/Johnserf-Seed/TikTokDownload)
-- [TiktokAPI1](https://github.com/yi005/Tiktok-Video-No-Watermark)
-- [TiktokAPI2](https://rapidapi.com/yi005/api/tiktok-video-no-watermark2/)
-- [KuaishouAPI](https://www.videofk.com/en3886) -->
 ## Author
 
 👤 **Sokun Heng**
@@ -179,29 +185,6 @@ If you're a non coder, you can also download the application and use it on your 
 
 Please ⭐️ this repository if this project helped you!
 
-## Security Policy
-
-<details>
-<summary>Contents</summary>
-
-We will not responsible for any actions resulting from your use or inability to utilize the service, copyright, or anything else arising under this agreement and use at your own risk under Copyright law. Please show respect to the copyright owner and original creator. Thanks
-
-</details>
-
-
-## Supported Versions
-
-Currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-|   0.1   | :white_check_mark: |
-|   0.2   | :white_check_mark: |
-
-## Reporting a Vulnerability
-
-If you encounter any problems, please report them by visiting [here](https://github.com/SokunHeng/DownEdit/issues)!
-
 
 ## 📝 License
-Copyright © 2022 [Sokun](https://github.com/SokunHeng)[Heng](https://justpaste.it/reference-heng).<br />
+Copyright © 2022 [SokunHeng](https://github.com/SokunHeng).<br />
