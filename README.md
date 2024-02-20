@@ -125,7 +125,10 @@ Tips: If you still getting error, try changing your Browser, use Incognito/Priva
 
 <details>
 <summary>Tutorial</summary>
-
+  
+  - `Remove Background AI`
+<img src="https://github.com/sokunheng/DownEdit/assets/44894784/2f351ebc-1dc2-4d97-b26f-2218426a7969.png" alt="down_edit_photo" width="537" />
+  
 </details>
 
 ## 🔎 Requirements
