@@ -28,6 +28,8 @@
 | Type | Model | Param | Provider| Slighter | Bulk | API | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Image | `Stable-diffusion` `Midjourney` | 137B | Enterpix | ✔️ | ✔️ | ✔️ | ![Active](https://img.shields.io/badge/Active-brightgreen) |
+| Image | `DownEditNet` |  | DownEdit | ✔️ | ✔️ | ❌ | ![Active](https://img.shields.io/badge/Active-brightgreen) |
+
 
 ## 🚀 Usage
 - **`Edit Video`** - Simply copy and paste (right click) whatever directory location you would like to process.
