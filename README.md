@@ -25,7 +25,7 @@
 | [kuaishou.com](https://www.kuaishou.com/?isHome=1) | `None` | ✔️ | ✔️ | ✔️ | ![Inactive](https://img.shields.io/badge/Inactive-red) | ✔️ |
 
 ## 🤖 AI
-| Type | Model | Param | Provider| Slighter | Bulk | API | Status |
+| Type | Model | Param | Provider| Minimal | Bulk | API | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Image | `Stable-diffusion` `Midjourney` | 137B | Enterpix | ✔️ | ✔️ | ✔️ | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | Image | `DownEditNet` |  | DownEdit | ✔️ | ✔️ | ❌ | ![Active](https://img.shields.io/badge/Active-brightgreen) |
